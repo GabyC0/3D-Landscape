@@ -1,0 +1,56 @@
+.forest {
+    background-color: green !important;
+}
+
+.image-container {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    --s: 300px; // the image size
+    
+    width: var(--s);
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    padding-inline: calc(var(--s)/10) 0;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: perspective(350px) rotateY(calc(var(--_i,1)*10deg));
+    transition: .5s;
+    cursor: pointer;
+  
+    // Additional properties
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+  
+    &:hover {
+      --_i: -1;
+      padding-inline: 0 calc(var(--s)/10);
+    }
+  
+    // Media queries for responsiveness
+    @media (max-width: 768px) {
+      --s: 200px;
+    }
+  
+    // Accessibility
+    &::before {
+      content: "Hover to rotate";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+  
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  
