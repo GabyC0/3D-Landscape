@@ -5,7 +5,7 @@ import WireframeCube from "../Components/WireframeCube";
 //   return (<div>Cube</div>);
 // }
 
-export default function cube() {
+export default function Cube() {
   return (
     
     <div>

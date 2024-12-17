@@ -6,13 +6,12 @@
 
 import Spline from '@splinetool/react-spline/next';
 
-export default function Home() {
+export default function SplineImport() {
   return (
     <main>
       <Spline
-        scene="https://prod.spline.design/O3mFPpont8zPV9Y1/scene.splinecode" 
+        scene="https://prod.spline.design/O3mFPpont8zPV9Y1/scene.splinecode"
       />
     </main>
   );
 }
-
