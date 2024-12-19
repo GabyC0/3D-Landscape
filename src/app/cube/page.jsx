@@ -10,7 +10,6 @@ export default function Cube() {
     
     <div>
       <div>three.js cube</div>
-      <h1>Three.js in Next.js</h1>
       <WireframeCube />
     </div>
   )
